@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESP32 Control Panel - UmbraShare</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>UmbraShare Project by Tamim ☂</h1>
+    <h2>ESP32 Control Panel</h2>
+
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="relaySwitch">
+        <span class="slider"></span>
+      </label>
+      <p>Take Umbrella (Relay)</p>
+    </div>
+
+    <div class="qr-container">
+      <button id="scanQR">Scan QR to Take</button>
+      <video id="qr-video" hidden></video>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
